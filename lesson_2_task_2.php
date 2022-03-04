@@ -6,58 +6,56 @@ function up_to_15($var)
 {
     switch ($var){
         case 0:
-            echo 0;
+            echo $var++;
         
         case 1:
-            echo 1;
+            echo $var++;
         
         case 2:
-            echo 2;
+            echo $var++;
         
         case 3:
-            echo 3;
+            echo $var++;
         
         case 4:
-            echo 4;
+            echo $var++;
 
         case 5:
-            echo 5;
+            echo $var++;
 
         case 6:
-            echo 6;
+            echo $var++;
 
         case 7:
-            echo 7;
+            echo $var++;
 
         case 8:
-            echo 8;
+            echo $var++;
 
         case 9:
-            echo 9;
+            echo $var++;
 
         case 10:
-            echo 10;
+            echo $var++;
 
         case 11:
-            echo 11;
+            echo $var++;
 
         case 12:
-            echo 12;
+            echo $var++;
 
         case 13:
-            echo 13;
+            echo $var++;
 
         case 14:
-            echo 14;
+            echo $var++;
 
         case 15:
-            echo 15;
-            break;
+            echo $var++;
 
                         
     }
 }
-
 
 function up_to_15V2($var)
 {
@@ -66,7 +64,6 @@ function up_to_15V2($var)
     }
     return $var . up_to_15V2($var + 1);
 }
-
 
 echo up_to_15($a);
 echo "<br>";

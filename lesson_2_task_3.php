@@ -23,4 +23,4 @@ function dev($arg1, $arg2)
     return ($arg2 === 0)? "на 0 делить нельзя" :  $arg1 / $arg2;
 }
 
-echo arithmetic($a, $b);
+echo dev($a, $b);

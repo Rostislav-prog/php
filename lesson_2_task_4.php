@@ -37,7 +37,6 @@ function mathOperation($arg1, $arg2, $operation)
 
         default:
             return "ошибка операции";
-            break;
     }
 }
 
