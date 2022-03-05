@@ -105,7 +105,7 @@ foo($arrRegion);
     // Важное, при желании можно сделать на движке 3. ВАЖНОЕ!
     
     $menu = [
-        ["url" => "#", "name" => "Меню1"],
+        ["url" => "#", "name" => "Меню1", "submenu" => ["url" => "#", "name" => "Меню11"]],
         ["url" => "#", "name" => "Меню2"],
         ["url" => "#", "name" => "Меню3"],
         ["url" => "#", "name" => "Меню4"],
@@ -118,6 +118,41 @@ foo($arrRegion);
         <li><a href="<?=$val["url"]?>"><?=$val["name"]?></a></li>
         <?php endforeach; ?>
     </ul>
+
+    <?php
+
+    function renderMenu($menu)
+    {
+        $out = "<ul>";
+
+        foreach ($menu as $item){
+            $out .= "<li><a href='{$item['url']}'>{$item['name']}</a>";
+            if (isset($item['submenu'])){
+                $out .= renderMenu($item['submenu']);
+            }
+            $out .= "</li>";   
+        }
+
+        $out .= "</ul>";
+
+        return $out;
+    }
+
+    echo renderMenu($menu);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
     
     
